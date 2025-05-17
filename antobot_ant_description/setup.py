@@ -5,6 +5,8 @@ from glob import glob
 package_name = 'antobot_ant_description'
 
 setup(
+
+
     name=package_name,
     version='0.0.0',
     packages=[package_name],
@@ -26,6 +28,9 @@ setup(
     license='TODO: License declaration',
     entry_points={
         'console_scripts': [
+            'ros_camera_flask = antobot_ant_description.ros_camera_flask_server:main',
+            'mqtt_joystick_controller = antobot_ant_description.mqtt_joystick_controller:main',
         ],
     },
+
 )

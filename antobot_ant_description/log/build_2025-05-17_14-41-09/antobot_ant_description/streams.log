@@ -1,0 +1,71 @@
+[0.895s] Invoking command in '/home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description': PYTHONPATH=/home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/antobot_ant_description build --build-base /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/build install --record /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/install.log --single-version-externally-managed install_data
+[1.246s] running egg_info
+[1.246s] creating build/antobot_ant_description/antobot_ant_description.egg-info
+[1.247s] writing build/antobot_ant_description/antobot_ant_description.egg-info/PKG-INFO
+[1.247s] writing dependency_links to build/antobot_ant_description/antobot_ant_description.egg-info/dependency_links.txt
+[1.247s] writing entry points to build/antobot_ant_description/antobot_ant_description.egg-info/entry_points.txt
+[1.247s] writing requirements to build/antobot_ant_description/antobot_ant_description.egg-info/requires.txt
+[1.247s] writing top-level names to build/antobot_ant_description/antobot_ant_description.egg-info/top_level.txt
+[1.247s] writing manifest file 'build/antobot_ant_description/antobot_ant_description.egg-info/SOURCES.txt'
+[1.249s] reading manifest file 'build/antobot_ant_description/antobot_ant_description.egg-info/SOURCES.txt'
+[1.250s] writing manifest file 'build/antobot_ant_description/antobot_ant_description.egg-info/SOURCES.txt'
+[1.250s] running build
+[1.250s] running build_py
+[1.250s] creating /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/build
+[1.250s] creating /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/build/lib
+[1.250s] creating /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/build/lib/antobot_ant_description
+[1.250s] copying antobot_ant_description/ros_camera_flask_server.py -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/build/lib/antobot_ant_description
+[1.251s] copying antobot_ant_description/__init__.py -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/build/lib/antobot_ant_description
+[1.251s] copying antobot_ant_description/mqtt_joystick_controller.py -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/build/lib/antobot_ant_description
+[1.251s] running install
+[1.251s] running install_lib
+[1.251s] creating /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages/antobot_ant_description
+[1.251s] copying /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/build/lib/antobot_ant_description/ros_camera_flask_server.py -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages/antobot_ant_description
+[1.252s] copying /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/build/lib/antobot_ant_description/__init__.py -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages/antobot_ant_description
+[1.252s] copying /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/build/lib/antobot_ant_description/mqtt_joystick_controller.py -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages/antobot_ant_description
+[1.252s] byte-compiling /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages/antobot_ant_description/ros_camera_flask_server.py to ros_camera_flask_server.cpython-310.pyc
+[1.252s] byte-compiling /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages/antobot_ant_description/__init__.py to __init__.cpython-310.pyc
+[1.253s] byte-compiling /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages/antobot_ant_description/mqtt_joystick_controller.py to mqtt_joystick_controller.cpython-310.pyc
+[1.253s] running install_data
+[1.253s] creating /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/ament_index
+[1.253s] creating /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/ament_index/resource_index
+[1.253s] creating /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/ament_index/resource_index/packages
+[1.253s] copying resource/antobot_ant_description -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/ament_index/resource_index/packages
+[1.254s] copying package.xml -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description
+[1.254s] creating /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/launch
+[1.254s] copying launch/gazebo.launch.py -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/launch
+[1.254s] copying launch/display.launch.py -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/launch
+[1.254s] copying launch/full_system.launch.py -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/launch
+[1.254s] creating /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/urdf
+[1.254s] copying urdf/lidar.xacro -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/urdf
+[1.255s] copying urdf/materials.xacro -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/urdf
+[1.255s] copying urdf/antobot_ant.gazebo -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/urdf
+[1.255s] copying urdf/camera.xacro -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/urdf
+[1.255s] copying urdf/antobot_ant.xacro -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/urdf
+[1.255s] copying urdf/2d-lidar.xacro -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/urdf
+[1.255s] creating /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/meshes
+[1.255s] copying meshes/rear_camera_1.stl -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/meshes
+[1.255s] copying meshes/wheelTR_1R.stl -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/meshes
+[1.259s] copying meshes/wheelTL_1.stl -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/meshes
+[1.259s] copying meshes/base_link_R.stl -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/meshes
+[1.262s] copying meshes/wheelBR_1.stl -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/meshes
+[1.262s] copying meshes/wheelBR_1R.stl -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/meshes
+[1.267s] copying meshes/wheelTL_1R.stl -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/meshes
+[1.272s] copying meshes/front_camera_1.stl -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/meshes
+[1.272s] copying meshes/wheelBL_1R.stl -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/meshes
+[1.277s] copying meshes/Leishen_C16_Bottom_Connector_1.stl -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/meshes
+[1.278s] copying meshes/wheelBL_1.stl -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/meshes
+[1.278s] copying meshes/base_link.stl -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/meshes
+[1.278s] copying meshes/wheelTR_1.stl -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/meshes
+[1.278s] creating /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/config
+[1.279s] copying config/display.rviz -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/config
+[1.279s] creating /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/worlds
+[1.279s] copying worlds/agriculture.world -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/worlds
+[1.279s] copying worlds/basic.world -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/worlds
+[1.279s] running install_egg_info
+[1.281s] Copying build/antobot_ant_description/antobot_ant_description.egg-info to /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages/antobot_ant_description-0.0.0-py3.10.egg-info
+[1.281s] running install_scripts
+[1.301s] Installing mqtt_joystick_controller script to /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/antobot_ant_description
+[1.301s] Installing ros_camera_flask script to /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/antobot_ant_description
+[1.302s] writing list of installed files to '/home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/install.log'
+[1.321s] Invoked command in '/home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description' returned '0': PYTHONPATH=/home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/antobot_ant_description build --build-base /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/build install --record /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/install.log --single-version-externally-managed install_data

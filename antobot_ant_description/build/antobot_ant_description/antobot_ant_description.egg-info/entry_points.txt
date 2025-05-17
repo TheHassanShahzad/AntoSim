@@ -1,0 +1,4 @@
+[console_scripts]
+mqtt_joystick_controller = antobot_ant_description.mqtt_joystick_controller:main
+ros_camera_flask = antobot_ant_description.ros_camera_flask_server:main
+

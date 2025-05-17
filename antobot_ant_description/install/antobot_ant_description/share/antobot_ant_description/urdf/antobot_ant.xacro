@@ -1,0 +1,234 @@
+<?xml version="1.0" ?>
+<robot name="antobot_ant" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find antobot_ant_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find antobot_ant_description)/urdf/antobot_ant.gazebo" />
+<xacro:include filename="$(find antobot_ant_description)/urdf/camera.xacro" />
+<xacro:include filename="$(find antobot_ant_description)/urdf/2d-lidar.xacro" />
+
+<link name="base_footprint"></link>
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.0078065090363846346 5.900549531193386e-17 0.19888879025928274" rpy="0 0 0"/>
+    <mass value="1239.0171749397857"/>
+    <inertia ixx="46.279732" iyy="188.951914" izz="203.003734" ixy="0.0" iyz="0.0" ixz="0.036259"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find antobot_ant_description)/meshes/base_link_R.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find antobot_ant_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheelTR_1">
+  <inertial>
+    <origin xyz="0.0 -0.05351200000000009 -5.898059818321144e-17" rpy="0 0 0"/>
+    <mass value="81.46481470062879"/>
+    <inertia ixx="0.706366" iyy="1.257215" izz="0.706366" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.265 0.21 0.02" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find antobot_ant_description)/meshes/wheelTR_1R.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.265 0.21 0.02" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find antobot_ant_description)/meshes/wheelTR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheelBR_1">
+  <inertial>
+    <origin xyz="0.0 -0.05351200000000009 -5.898059818321144e-17" rpy="0 0 0"/>
+    <mass value="81.46481470062879"/>
+    <inertia ixx="0.706366" iyy="1.257215" izz="0.706366" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.265 0.21 0.02" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find antobot_ant_description)/meshes/wheelBR_1R.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.265 0.21 0.02" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find antobot_ant_description)/meshes/wheelBR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheelBL_1">
+  <inertial>
+    <origin xyz="0.0 0.05351200000000009 5.551115123125783e-17" rpy="0 0 0"/>
+    <mass value="81.46481470062879"/>
+    <inertia ixx="0.706366" iyy="1.257215" izz="0.706366" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.265 -0.21 0.02" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find antobot_ant_description)/meshes/wheelBL_1R.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.265 -0.21 0.02" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find antobot_ant_description)/meshes/wheelBL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheelTL_1">
+  <inertial>
+    <origin xyz="0.0 0.05351200000000009 5.551115123125783e-17" rpy="0 0 0"/>
+    <mass value="81.46481470062879"/>
+    <inertia ixx="0.706366" iyy="1.257215" izz="0.706366" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.265 -0.21 0.02" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find antobot_ant_description)/meshes/wheelTL_1R.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.265 -0.21 0.02" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find antobot_ant_description)/meshes/wheelTL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rear_camera_1">
+  <inertial>
+    <origin xyz="-0.009488207545488292 1.1333156635373597e-13 -2.2400090748941892e-07" rpy="0 0 0"/>
+    <mass value="1.2113692897146735"/>
+    <inertia ixx="0.002916" iyy="0.000261" izz="0.00273" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.74355 -0.0 -0.311894" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find antobot_ant_description)/meshes/rear_camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.74355 -0.0 -0.311894" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find antobot_ant_description)/meshes/rear_camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_camera_1">
+  <inertial>
+    <origin xyz="0.009489069408963546 -1.1333156635373597e-13 -2.820043587536958e-07" rpy="0 0 0"/>
+    <mass value="1.2113692897146735"/>
+    <inertia ixx="0.002916" iyy="0.000261" izz="0.00273" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.730549 -0.0 -0.313081" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find antobot_ant_description)/meshes/front_camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.730549 -0.0 -0.313081" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find antobot_ant_description)/meshes/front_camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Leishen_C16_Bottom_Connector_1">
+  <inertial>
+    <origin xyz="0.00033107082234540286 -2.3270637740629985e-05 0.032575610808614874" rpy="0 0 0"/>
+    <mass value="0.8957309729860499"/>
+    <inertia ixx="0.001593" iyy="0.001616" izz="0.001786" ixy="-1e-06" iyz="-1e-06" ixz="1.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.680776 0.108 -0.412579" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find antobot_ant_description)/meshes/Leishen_C16_Bottom_Connector_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.680776 0.108 -0.412579" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find antobot_ant_description)/meshes/Leishen_C16_Bottom_Connector_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+
+<joint name="base_footprint_joint" type="fixed">
+  <origin xyz="0 0 0.2" rpy="0 0 0"/>
+  <parent link="base_footprint"/>
+  <child link="base_link"/>
+</joint>
+
+<joint name="wheelTR_joint" type="continuous">
+  <origin xyz="0.265 -0.21 -0.02" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheelTR_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <mimic joint="wheelBR_joint" multiplier="1.0" offset="0.0"/>
+</joint>
+
+<joint name="wheelBR_joint" type="continuous">
+  <origin xyz="-0.265 -0.21 -0.02" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheelBR_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="wheelBL_joint" type="continuous">
+  <origin xyz="-0.265 0.21 -0.02" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheelBL_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="wheelTL_joint" type="continuous">
+  <origin xyz="0.265 0.21 -0.02" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="wheelTL_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <mimic joint="wheelBL_joint" multiplier="1.0" offset="0.0"/>
+</joint>
+
+<joint name="rear_camera_joint" type="fixed">
+  <origin xyz="-0.74355 0.0 0.311894" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rear_camera_1"/>
+</joint>
+
+<joint name="fromt_camera_joint" type="fixed">
+  <origin xyz="0.730549 0.0 0.313081" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_camera_1"/>
+</joint>
+
+<joint name="leishen_l16_joint" type="fixed">
+  <origin xyz="0.680776 -0.108 0.412579" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Leishen_C16_Bottom_Connector_1"/>
+</joint>
+
+</robot>
