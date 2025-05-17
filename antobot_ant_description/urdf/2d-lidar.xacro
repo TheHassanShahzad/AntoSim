@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <joint name="laser_joint" type="fixed">
+    <parent link="Leishen_C16_Bottom_Connector_1"/>
+    <child link="laser_frame"/>
+    <origin xyz="0 0 0.03842" rpy="0 0 0"/>
+  </joint>
+
+  <link name="laser_frame"/>
+
+  <gazebo reference="laser_frame">
+    <material>Gazebo/Red</material>
+
+    <sensor name="leishen_2d_lidar_sim" type="ray">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <!-- 20° = 0.349 rad -->
+            <samples>320</samples> <!-- Optional: Adjust to your desired resolution -->
+            <min_angle>-2.82</min_angle>       <!-- -20 degrees -->
+            <max_angle>2.82</max_angle>     <!-- +20 degrees -->
+          </horizontal>
+          <vertical>
+            <samples>1</samples>
+            <min_angle>0.0</min_angle>
+            <max_angle>0.0</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.1</min>
+          <max>30.0</max> <!-- Typical for 2D LiDAR -->
+        </range>
+        <!-- <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise> -->
+      </ray>
+      <plugin name="leishen_2d_lidar_points" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <argument>~/out:=scan</argument>
+        </ros>
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <frame_name>laser_frame</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+</robot>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <joint name="laser_joint" type="fixed">
+    <parent link="Leishen_C16_Bottom_Connector_1"/>
+    <child link="laser_frame"/>
+    <origin xyz="0 0 0.03842" rpy="0 0 0"/>
+  </joint>
+
+  <link name="laser_frame"/>
+
+  <gazebo reference="laser_frame">
+    <material>Gazebo/Red</material>
+
+    <sensor name="leishen_l16_sim" type="ray">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>false</visualize>
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>400</samples>                <!-- ~0.09° resolution -->
+            <min_angle>-3.14159</min_angle>       <!-- -180° -->
+            <max_angle>3.14159</max_angle>        <!-- +180° -->
+          </horizontal>
+          <vertical>
+            <samples>16</samples>
+            <min_angle>-0.2618</min_angle>        <!-- -15° -->
+            <max_angle>0.2618</max_angle>         <!-- +15° -->
+          </vertical>
+        </scan>
+        <range>
+          <min>0.1</min>
+          <max>150.0</max>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="leishen_l16_points" filename="libgazebo_ros_ray_sensor.so">
+        <ros>
+          <argument>~/out:=/leishen_l16/points</argument>
+        </ros>
+        <output_type>sensor_msgs/PointCloud2</output_type>
+        <frame_name>laser_frame</frame_name>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+</robot>
