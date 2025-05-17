@@ -72,12 +72,7 @@ This will:
 
 You can control the robot and view the camera stream using the mobile app located at:
 
-AntoSim/
-├── antobot_ant_description/ # ROS 2 package with robot description, camera + joystick nodes
-├── antobot_sim_description/ # Optional: related simulation assets
-└── App/ # Flutter mobile app (UI + MQTT + video stream)
-└── lib/
-└── main.dart
+AntoSim/App/lib/main.dart
 
 
 - - -
