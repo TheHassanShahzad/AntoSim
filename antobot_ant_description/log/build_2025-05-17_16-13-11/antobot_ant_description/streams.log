@@ -1,0 +1,22 @@
+[0.861s] Invoking command in '/home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description': PYTHONPATH=/home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/antobot_ant_description build --build-base /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/build install --record /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/install.log --single-version-externally-managed install_data
+[1.201s] running egg_info
+[1.201s] writing build/antobot_ant_description/antobot_ant_description.egg-info/PKG-INFO
+[1.202s] writing dependency_links to build/antobot_ant_description/antobot_ant_description.egg-info/dependency_links.txt
+[1.202s] writing entry points to build/antobot_ant_description/antobot_ant_description.egg-info/entry_points.txt
+[1.202s] writing requirements to build/antobot_ant_description/antobot_ant_description.egg-info/requires.txt
+[1.202s] writing top-level names to build/antobot_ant_description/antobot_ant_description.egg-info/top_level.txt
+[1.204s] reading manifest file 'build/antobot_ant_description/antobot_ant_description.egg-info/SOURCES.txt'
+[1.205s] writing manifest file 'build/antobot_ant_description/antobot_ant_description.egg-info/SOURCES.txt'
+[1.205s] running build
+[1.205s] running build_py
+[1.205s] running install
+[1.205s] running install_lib
+[1.206s] running install_data
+[1.207s] running install_egg_info
+[1.208s] removing '/home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages/antobot_ant_description-0.0.0-py3.10.egg-info' (and everything under it)
+[1.208s] Copying build/antobot_ant_description/antobot_ant_description.egg-info to /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages/antobot_ant_description-0.0.0-py3.10.egg-info
+[1.209s] running install_scripts
+[1.229s] Installing mqtt_joystick_controller script to /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/antobot_ant_description
+[1.229s] Installing ros_camera_flask script to /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/antobot_ant_description
+[1.229s] writing list of installed files to '/home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/install.log'
+[1.246s] Invoked command in '/home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description' returned '0': PYTHONPATH=/home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/antobot_ant_description build --build-base /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/build install --record /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/build/antobot_ant_description/install.log --single-version-externally-managed install_data

@@ -45,7 +45,7 @@ sudo systemctl enable --now mosquitto
 ## 🛠️ Building the Package
 
 ~~~bash
-cd ~/Documents/Real_antosim/AntoSim/antobot_ant_description
+cd AntoSim/antobot_ant_description
 colcon build --packages-select antobot_ant_description
 source install/setup.bash
 ~~~
