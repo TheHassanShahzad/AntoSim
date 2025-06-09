@@ -40,4 +40,4 @@ urdf/camera.xacro
 urdf/lidar.xacro
 urdf/materials.xacro
 worlds/agriculture.world
-worlds/basic.world
+worlds/agriculture.world

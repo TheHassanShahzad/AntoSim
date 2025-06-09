@@ -16,7 +16,7 @@ def generate_launch_description():
     robot_description_config = xacro.process_file(xacro_file)
     robot_urdf = robot_description_config.toxml()
 
-    world_path = os.path.join(share_dir, 'worlds', 'basic.world')
+    world_path = os.path.join(share_dir, 'worlds', 'agriculture.world')
 
     robot_state_publisher_node = Node(
         package='robot_state_publisher',

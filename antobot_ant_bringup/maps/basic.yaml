@@ -1,4 +1,4 @@
-image: basic.pgm
+image: agriculture.pgm
 mode: trinary
 resolution: 0.05
 origin: [-10.3, -7.8, 0]

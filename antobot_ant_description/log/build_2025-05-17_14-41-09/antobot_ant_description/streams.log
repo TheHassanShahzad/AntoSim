@@ -61,7 +61,7 @@
 [1.279s] copying config/display.rviz -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/config
 [1.279s] creating /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/worlds
 [1.279s] copying worlds/agriculture.world -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/worlds
-[1.279s] copying worlds/basic.world -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/worlds
+[1.279s] copying worlds/agriculture.world -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/worlds
 [1.279s] running install_egg_info
 [1.281s] Copying build/antobot_ant_description/antobot_ant_description.egg-info to /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages/antobot_ant_description-0.0.0-py3.10.egg-info
 [1.281s] running install_scripts

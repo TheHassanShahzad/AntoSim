@@ -60,7 +60,7 @@ creating /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/inst
 copying config/display.rviz -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/config
 creating /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/worlds
 copying worlds/agriculture.world -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/worlds
-copying worlds/basic.world -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/worlds
+copying worlds/agriculture.world -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/worlds
 running install_egg_info
 Copying build/antobot_ant_description/antobot_ant_description.egg-info to /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages/antobot_ant_description-0.0.0-py3.10.egg-info
 running install_scripts

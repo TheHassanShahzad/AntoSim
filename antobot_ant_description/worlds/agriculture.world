@@ -1,10 +1,9 @@
-<?xml version='1.0'?>
-<sdf version='1.6'>
+<sdf version='1.7'>
   <world name='default'>
     <light name='sun' type='directional'>
       <cast_shadows>1</cast_shadows>
-      <pose frame=''>0 0 10 0 -0 0</pose>
-      <diffuse>1 1 1 1</diffuse>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
       <specular>0.2 0.2 0.2 1</specular>
       <attenuation>
         <range>1000</range>
@@ -12,18 +11,30 @@
         <linear>0.01</linear>
         <quadratic>0.001</quadratic>
       </attenuation>
-      <direction>-0.5 -0.5 -1</direction>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
     </light>
-    <physics name='default_physics' default='0' type='ode'>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>1000</real_time_update_rate>
     </physics>
     <scene>
-      <ambient>1 1 1 1</ambient>
-      <background>1 1 1 1</background>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
       <shadows>1</shadows>
     </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
     <spherical_coordinates>
       <surface_model>EARTH_WGS84</surface_model>
       <latitude_deg>0</latitude_deg>
@@ -31,44 +42,591 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <state world_name='default'>
-      <sim_time>203 490000000</sim_time>
-      <real_time>168 470627290</real_time>
-      <wall_time>1596490486 155571625</wall_time>
-      <iterations>167975</iterations>
-      <model name='agriculture_geom'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='agriculture_world_link'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <light name='sun'>
-        <pose frame=''>0 0 10 0 -0 0</pose>
-      </light>
-    </state>
-    <gui fullscreen='0'>
-      <camera name='user_camera'>
-        <pose frame=''>218.674 28.4041 66.9437 0 0.275643 3.14159</pose>
-        <view_controller>orbit</view_controller>
-        <projection_type>perspective</projection_type>
-      </camera>
-    </gui>
-    <gravity>0 0 -9.8</gravity>
-    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
-    <atmosphere type='adiabatic'/>
-    <audio>
-      <device>default</device>
-    </audio>
-    <wind/>
+    <model name='antobot_ant'>
+      <link name='base_footprint'>
+        <inertial>
+          <pose>-0.007307 -7.8e-05 0.399288 0 -0 0</pose>
+          <mass>1242.34</mass>
+          <inertia>
+            <ixx>46.383</ixx>
+            <ixy>0.0666098</ixy>
+            <ixz>-0.116876</ixz>
+            <iyy>190.814</iyy>
+            <iyz>0.023789</iyz>
+            <izz>204.796</izz>
+          </inertia>
+        </inertial>
+        <collision name='base_footprint_fixed_joint_lump__base_link_collision'>
+          <pose>0 0 0.2 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/the-hassan-shahzad/ros2_ws/install/antobot_ant_description/share/antobot_ant_description/meshes/base_link.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='base_footprint_fixed_joint_lump__front_camera_1_collision_1'>
+          <pose>0 0 0.2 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/the-hassan-shahzad/ros2_ws/install/antobot_ant_description/share/antobot_ant_description/meshes/front_camera_1.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='base_footprint_fixed_joint_lump__Leishen_C16_Bottom_Connector_1_collision_2'>
+          <pose>0 0 0.2 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/the-hassan-shahzad/ros2_ws/install/antobot_ant_description/share/antobot_ant_description/meshes/Leishen_C16_Bottom_Connector_1.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='base_footprint_fixed_joint_lump__rear_camera_1_collision_3'>
+          <pose>0 0 0.2 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/the-hassan-shahzad/ros2_ws/install/antobot_ant_description/share/antobot_ant_description/meshes/rear_camera_1.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.2</mu>
+                <mu2>0.2</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='base_footprint_fixed_joint_lump__base_link_visual'>
+          <pose>0 0 0.2 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/the-hassan-shahzad/ros2_ws/install/antobot_ant_description/share/antobot_ant_description/meshes/base_link_R.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Silver</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_footprint_fixed_joint_lump__front_camera_1_visual_1'>
+          <pose>0 0 0.2 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/the-hassan-shahzad/ros2_ws/install/antobot_ant_description/share/antobot_ant_description/meshes/front_camera_1.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Silver</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_footprint_fixed_joint_lump__Leishen_C16_Bottom_Connector_1_visual_2'>
+          <pose>0 0 0.2 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/the-hassan-shahzad/ros2_ws/install/antobot_ant_description/share/antobot_ant_description/meshes/Leishen_C16_Bottom_Connector_1.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Silver</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_footprint_fixed_joint_lump__rear_camera_1_visual_3'>
+          <pose>0 0 0.2 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/the-hassan-shahzad/ros2_ws/install/antobot_ant_description/share/antobot_ant_description/meshes/rear_camera_1.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Silver</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <gravity>0</gravity>
+        <self_collide>0</self_collide>
+        <sensor name='front_camera' type='camera'>
+          <visualize>1</visualize>
+          <update_rate>10</update_rate>
+          <camera>
+            <horizontal_fov>1.089</horizontal_fov>
+            <image>
+              <format>R8G8B8</format>
+              <width>640</width>
+              <height>480</height>
+            </image>
+            <clip>
+              <near>0.05</near>
+              <far>8</far>
+            </clip>
+          </camera>
+          <plugin name='front_camera_controller' filename='libgazebo_ros_camera.so'>
+            <frame_name>front_camera_link_optical</frame_name>
+          </plugin>
+          <pose>0.750549 0 0.513081 0 -0 0</pose>
+        </sensor>
+        <self_collide>0</self_collide>
+        <sensor name='leishen_2d_lidar_sim' type='ray'>
+          <visualize>0</visualize>
+          <update_rate>10</update_rate>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>320</samples>
+                <min_angle>-2.82</min_angle>
+                <max_angle>2.82</max_angle>
+                <resolution>1</resolution>
+              </horizontal>
+              <vertical>
+                <samples>1</samples>
+                <min_angle>0</min_angle>
+                <max_angle>0</max_angle>
+              </vertical>
+            </scan>
+            <range>
+              <min>0.1</min>
+              <max>30</max>
+            </range>
+          </ray>
+          <plugin name='leishen_2d_lidar_points' filename='libgazebo_ros_ray_sensor.so'>
+            <ros>
+              <argument>~/out:=scan</argument>
+            </ros>
+            <output_type>sensor_msgs/LaserScan</output_type>
+            <frame_name>laser_frame</frame_name>
+          </plugin>
+          <pose>0.680776 -0.108 0.650999 0 -0 0</pose>
+        </sensor>
+        <self_collide>0</self_collide>
+        <sensor name='rear_camera' type='camera'>
+          <visualize>1</visualize>
+          <update_rate>10</update_rate>
+          <camera>
+            <horizontal_fov>1.089</horizontal_fov>
+            <image>
+              <format>R8G8B8</format>
+              <width>640</width>
+              <height>480</height>
+            </image>
+            <clip>
+              <near>0.05</near>
+              <far>8</far>
+            </clip>
+          </camera>
+          <plugin name='rear_camera_controller' filename='libgazebo_ros_camera.so'>
+            <frame_name>rear_camera_link_optical</frame_name>
+          </plugin>
+          <pose>-0.76355 0 0.511894 0 -0 3.14159</pose>
+        </sensor>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='wheelBL_joint' type='revolute'>
+        <pose relative_to='base_footprint'>-0.265 0.21 0.18 0 -0 0</pose>
+        <parent>base_footprint</parent>
+        <child>wheelBL_1</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheelBL_1'>
+        <pose relative_to='wheelBL_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0.053512 0 0 -0 0</pose>
+          <mass>81.4648</mass>
+          <inertia>
+            <ixx>0.706366</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.25721</iyy>
+            <iyz>0</iyz>
+            <izz>0.706366</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheelBL_1_collision'>
+          <pose>0.265 -0.21 0.02 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/the-hassan-shahzad/ros2_ws/install/antobot_ant_description/share/antobot_ant_description/meshes/wheelBL_1.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='wheelBL_1_visual'>
+          <pose>0.265 -0.21 0.02 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/the-hassan-shahzad/ros2_ws/install/antobot_ant_description/share/antobot_ant_description/meshes/wheelBL_1R.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Silver</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='wheelBR_joint' type='revolute'>
+        <pose relative_to='base_footprint'>-0.265 -0.21 0.18 0 -0 0</pose>
+        <parent>base_footprint</parent>
+        <child>wheelBR_1</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheelBR_1'>
+        <pose relative_to='wheelBR_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 -0.053512 -0 0 -0 0</pose>
+          <mass>81.4648</mass>
+          <inertia>
+            <ixx>0.706366</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.25721</iyy>
+            <iyz>0</iyz>
+            <izz>0.706366</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheelBR_1_collision'>
+          <pose>0.265 0.21 0.02 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/the-hassan-shahzad/ros2_ws/install/antobot_ant_description/share/antobot_ant_description/meshes/wheelBR_1.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='wheelBR_1_visual'>
+          <pose>0.265 0.21 0.02 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/the-hassan-shahzad/ros2_ws/install/antobot_ant_description/share/antobot_ant_description/meshes/wheelBR_1R.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Silver</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='wheelTL_joint' type='revolute'>
+        <pose relative_to='base_footprint'>0.265 0.21 0.18 0 -0 0</pose>
+        <parent>base_footprint</parent>
+        <child>wheelTL_1</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheelTL_1'>
+        <pose relative_to='wheelTL_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0.053512 0 0 -0 0</pose>
+          <mass>81.4648</mass>
+          <inertia>
+            <ixx>0.706366</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.25721</iyy>
+            <iyz>0</iyz>
+            <izz>0.706366</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheelTL_1_collision'>
+          <pose>-0.265 -0.21 0.02 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/the-hassan-shahzad/ros2_ws/install/antobot_ant_description/share/antobot_ant_description/meshes/wheelTL_1.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='wheelTL_1_visual'>
+          <pose>-0.265 -0.21 0.02 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/the-hassan-shahzad/ros2_ws/install/antobot_ant_description/share/antobot_ant_description/meshes/wheelTL_1R.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Silver</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='wheelTR_joint' type='revolute'>
+        <pose relative_to='base_footprint'>0.265 -0.21 0.18 0 -0 0</pose>
+        <parent>base_footprint</parent>
+        <child>wheelTR_1</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheelTR_1'>
+        <pose relative_to='wheelTR_joint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 -0.053512 -0 0 -0 0</pose>
+          <mass>81.4648</mass>
+          <inertia>
+            <ixx>0.706366</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1.25721</iyy>
+            <iyz>0</iyz>
+            <izz>0.706366</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheelTR_1_collision'>
+          <pose>-0.265 0.21 0.02 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/the-hassan-shahzad/ros2_ws/install/antobot_ant_description/share/antobot_ant_description/meshes/wheelTR_1.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='wheelTR_1_visual'>
+          <pose>-0.265 0.21 0.02 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.001 0.001 0.001</scale>
+              <uri>file:///home/the-hassan-shahzad/ros2_ws/install/antobot_ant_description/share/antobot_ant_description/meshes/wheelTR_1R.stl</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Silver</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>0</static>
+      <plugin name='rear_diff_drive' filename='libgazebo_ros_diff_drive.so'>
+        <left_joint>wheelBL_joint</left_joint>
+        <right_joint>wheelBR_joint</right_joint>
+        <wheel_separation>0.6</wheel_separation>
+        <wheel_diameter>0.305</wheel_diameter>
+        <max_wheel_torque>200</max_wheel_torque>
+        <max_wheel_acceleration>10.0</max_wheel_acceleration>
+        <odometry_frame>odom</odometry_frame>
+        <robot_base_frame>base_footprint</robot_base_frame>
+        <publish_odom>1</publish_odom>
+        <publish_odom_tf>1</publish_odom_tf>
+        <publish_wheel_tf>1</publish_wheel_tf>
+        <cmd_vel_topic>rear_cmd_vel</cmd_vel_topic>
+      </plugin>
+      <plugin name='front_diff_drive' filename='libgazebo_ros_diff_drive.so'>
+        <left_joint>wheelTL_joint</left_joint>
+        <right_joint>wheelTR_joint</right_joint>
+        <wheel_separation>0.6</wheel_separation>
+        <wheel_diameter>0.305</wheel_diameter>
+        <max_wheel_torque>200</max_wheel_torque>
+        <max_wheel_acceleration>10.0</max_wheel_acceleration>
+        <odometry_frame>odom_front</odometry_frame>
+        <robot_base_frame>base_footprint</robot_base_frame>
+        <publish_odom>0</publish_odom>
+        <publish_odom_tf>0</publish_odom_tf>
+        <publish_wheel_tf>0</publish_wheel_tf>
+        <cmd_vel_topic>rear_cmd_vel</cmd_vel_topic>
+      </plugin>
+      <pose>0 0 0 0 -0 0</pose>
+    </model>
     <model name='agriculture_geom'>
       <link name='agriculture_world_link'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <inertial>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <mass>1</mass>
           <inertia>
             <ixx>1</ixx>
@@ -80,7 +638,7 @@
           </inertia>
         </inertial>
         <collision name='agriculture_world_link_collision'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
@@ -102,7 +660,7 @@
           </surface>
         </collision>
         <visual name='agriculture_world_link_visual'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
               <scale>1 1 1</scale>
@@ -115,7 +673,67 @@
         <kinematic>0</kinematic>
       </link>
       <static>1</static>
-      <pose frame=''>0 0 0 0 -0 0</pose>
+      <pose>7.6853 3.71374 0 0 -0 0</pose>
     </model>
+    <state world_name='default'>
+      <sim_time>578 457000000</sim_time>
+      <real_time>582 901786696</real_time>
+      <wall_time>1748188630 798808683</wall_time>
+      <iterations>578457</iterations>
+      <model name='agriculture_geom'>
+        <pose>7.6853 3.71374 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='agriculture_world_link'>
+          <pose>7.6853 3.71374 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='antobot_ant'>
+        <pose>-0.00292 -0.015081 -0.463958 0.049099 -0.026859 -0.112441</pose>
+        <scale>1 1 1</scale>
+        <link name='base_footprint'>
+          <pose>-0.00292 -0.015081 -0.463958 0.049099 -0.026859 -0.112441</pose>
+          <velocity>-9.2e-05 -0.000497 0.000794 -0.001915 9.8e-05 -4.5e-05</velocity>
+          <acceleration>0.037752 0.643836 1.80856 2.04633 0.556348 -0.222424</acceleration>
+          <wrench>46.9009 799.864 2246.84 0 -0 0</wrench>
+        </link>
+        <link name='wheelBL_1'>
+          <pose>-0.248681 0.214859 -0.281054 0.049124 -0.043053 -0.113237</pose>
+          <velocity>-5.7e-05 -0.000103 0.000298 0.000506 -0.000272 5e-06</velocity>
+          <acceleration>0.04864 -0.206111 0.624348 3.10234 0.139905 -0.097251</acceleration>
+          <wrench>3.96249 -16.7908 50.8624 0 -0 0</wrench>
+        </link>
+        <link name='wheelBR_1'>
+          <pose>-0.2952 -0.202048 -0.30166 0.049133 -0.044517 -0.113309</pose>
+          <velocity>-7.9e-05 -7.4e-05 0.001336 2.9e-05 -0.000182 3.1e-05</velocity>
+          <acceleration>-0.01496 -0.208922 2.80566 -1.90354 -0.035723 0.015778</acceleration>
+          <wrench>-1.21871 -17.0198 228.562 0 -0 0</wrench>
+        </link>
+        <link name='wheelTL_1'>
+          <pose>0.277782 0.155412 -0.26682 0.049082 -0.013404 -0.111779</pose>
+          <velocity>-5.8e-05 -0.000104 0.000328 0.000509 -0.000269 -1e-06</velocity>
+          <acceleration>0.044219 -0.223697 0.694418 3.04125 0.152537 -0.095036</acceleration>
+          <wrench>3.60226 -18.2234 56.5706 0 -0 0</wrench>
+        </link>
+        <link name='wheelTR_1'>
+          <pose>0.231263 -0.261494 -0.287426 0.049089 -0.01176 -0.111699</pose>
+          <velocity>-7.7e-05 -6.9e-05 0.001423 -2.9e-05 -0.000184 -2.5e-05</velocity>
+          <acceleration>-0.020755 -0.200186 3.00136 -1.71782 -0.071183 -0.054225</acceleration>
+          <wrench>-1.69077 -16.3081 244.505 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-37.2265 -30.6714 45.5955 0 0.663643 0.496195</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
   </world>
 </sdf>

@@ -12,11 +12,11 @@ def generate_launch_description():
 
     # File paths
     bringup_launch = os.path.join(bringup_dir, 'launch', 'bringup.launch.py')
-    map_file = PathJoinSubstitution([bringup_dir, 'maps', 'basic.yaml'])
+    map_file = PathJoinSubstitution([bringup_dir, 'maps', 'agriculture.yaml'])
     rviz_config = os.path.join(bringup_dir, 'config', 'localize_navigation.rviz')
 
     return LaunchDescription([
-        # Launch robot simulation (bringup.launch.py should handle basic.world internally)
+        # Launch robot simulation (bringup.launch.py should handle agriculture.world internally)
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(bringup_launch),
             launch_arguments={'use_sim_time': 'true'}.items()

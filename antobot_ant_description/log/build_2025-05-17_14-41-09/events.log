@@ -76,7 +76,7 @@
 [1.278804] (antobot_ant_description) StdoutLine: {'line': b'copying config/display.rviz -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/config\n'}
 [1.278896] (antobot_ant_description) StdoutLine: {'line': b'creating /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/worlds\n'}
 [1.278983] (antobot_ant_description) StdoutLine: {'line': b'copying worlds/agriculture.world -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/worlds\n'}
-[1.279142] (antobot_ant_description) StdoutLine: {'line': b'copying worlds/basic.world -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/worlds\n'}
+[1.279142] (antobot_ant_description) StdoutLine: {'line': b'copying worlds/agriculture.world -> /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/share/antobot_ant_description/worlds\n'}
 [1.279233] (antobot_ant_description) StdoutLine: {'line': b'running install_egg_info\n'}
 [1.280779] (antobot_ant_description) StdoutLine: {'line': b'Copying build/antobot_ant_description/antobot_ant_description.egg-info to /home/harry/Documents/Real_antosim/AntoSim/antobot_ant_description/install/antobot_ant_description/lib/python3.10/site-packages/antobot_ant_description-0.0.0-py3.10.egg-info\n'}
 [1.281481] (antobot_ant_description) StdoutLine: {'line': b'running install_scripts\n'}
